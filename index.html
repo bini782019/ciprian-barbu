@@ -7,53 +7,74 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
+  <header class="hero">
+    <div class="container hero-content">
       <img src="ciprian.jpg" alt="Ciprian Barbu" class="photo"/>
-      <h1>Ciprian Barbu</h1>
-      <p class="tagline">20+ Years Leading IT Operations, Cloud & Professional Services</p>
-      <div class="contact">
-        <a href="mailto:ciprian.barbu@gtcs.consulting">Email</a>
-        <a href="https://www.linkedin.com/in/ciprian-barbu-b9698313/">LinkedIn</a>
-        <a href="https://www.credly.com/users/ciprian-barbu">Credly</a>
-        <span>+40 757 088 563</span>
+      <div class="hero-text">
+        <p class="eyebrow">IT Leadership • Professional Services • Cloud Operations</p>
+        <h1>Ciprian Barbu</h1>
+        <p class="tagline">20+ years leading operations, service delivery, and high-performing teams across enterprise and fintech environments.</p>
+        <div class="contact">
+          <a href="mailto:ciprian.barbu@gtcs.consulting">ciprian.barbu@gtcs.consulting</a>
+          <a href="https://www.linkedin.com/in/ciprian-barbu-b9698313/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.credly.com/users/ciprian-barbu" target="_blank" rel="noopener noreferrer">Credly</a>
+          <span>+40 757 088 563</span>
+        </div>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section id="about">
-      <h2>Summary</h2>
-      <p>Accomplished leader with 20+ years in Professional Services, IT Operations, and Business Management. Proven track record guiding top-tier teams, cultivating client partnerships, and spearheading strategic initiatives that synchronize business objectives with customer success.</p>
+  <main class="container main-grid">
+    <section id="about" class="card featured-card">
+      <h2>Executive Summary</h2>
+      <p>Accomplished leader with over two decades in professional services, IT operations, and business management. Proven track record in building top-tier teams, strengthening long-term client partnerships, and delivering strategic initiatives that align technology outcomes with business growth.</p>
+      <div class="impact-grid">
+        <article>
+          <h3>20+ Years</h3>
+          <p>of IT and operations leadership experience</p>
+        </article>
+        <article>
+          <h3>30% YoY</h3>
+          <p>revenue growth in entrepreneurial venture</p>
+        </article>
+        <article>
+          <h3>20%</h3>
+          <p>improvement in customer satisfaction</p>
+        </article>
+      </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="card">
       <h2>Experience</h2>
-      <ul>
-        <li>
-          <strong>Alphacomm / Mi-Pay – Operations & Professional Services Leadership</strong><br>
-          Apr 2020 – Present | Sibiu, Romania<br>
-          Leading professional-services division, AWS & on-prem infrastructure, DevOps, SLA design, team development.
-        </li>
-        <li>
-          <strong>Mi-Pay – Operations Manager Lead</strong><br>
-          Jul 2016 – Apr 2020<br>
-          Directed service-delivery operations, improved customer satisfaction by 20%, aligned ITIL best practices.
-        </li>
-        <li>
-          <strong>Entrepreneur – Private Pension Management Firm</strong><br>
-          2014 – Present<br>
-          Founded and scaled a regulated investment-advisory firm, 30% YoY revenue growth.
-        </li>
-        <li>
-          <strong>Network Engineer & Architect</strong><br>
-          2005 – 2016 (MasterCard, TechSkills, Webster Univ., Marquardt, Flex)<br>
-          Progressed from CCNA to CCDP, designed global enterprise networks, mentored engineers.
-        </li>
-      </ul>
+      <div class="timeline">
+        <article>
+          <h3>Alphacomm / Mi-Pay</h3>
+          <p class="role">Operations & Professional Services Leadership</p>
+          <p class="meta">Apr 2020 – Present · Sibiu, Romania</p>
+          <p>Leading professional-services delivery, AWS and on-prem infrastructure strategy, DevOps practices, SLA design, and team development.</p>
+        </article>
+        <article>
+          <h3>Mi-Pay</h3>
+          <p class="role">Operations Manager Lead</p>
+          <p class="meta">Jul 2016 – Apr 2020</p>
+          <p>Directed service-delivery operations, aligned ITIL best practices, and improved customer satisfaction by 20%.</p>
+        </article>
+        <article>
+          <h3>Private Pension Management Firm</h3>
+          <p class="role">Entrepreneur</p>
+          <p class="meta">2014 – Present</p>
+          <p>Founded and scaled a regulated investment-advisory business, achieving consistent 30% year-over-year revenue growth.</p>
+        </article>
+        <article>
+          <h3>MasterCard, TechSkills, Webster University, Marquardt, Flex</h3>
+          <p class="role">Network Engineer & Architect</p>
+          <p class="meta">2005 – 2016</p>
+          <p>Progressed from CCNA to CCDP while architecting enterprise network solutions and mentoring engineering teams.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="card">
       <h2>Core Skills</h2>
       <div class="skills-grid">
         <span>Service Delivery Management</span>
@@ -62,12 +83,12 @@
         <span>Team Leadership & Mentorship</span>
         <span>Client Relationship Management</span>
         <span>Strategic Planning</span>
-        <span>VmWare / Proxmox / Fortigate</span>
+        <span>VMware / Proxmox / FortiGate</span>
         <span>PCI DSS & Security</span>
       </div>
     </section>
 
-    <section id="certifications">
+    <section id="certifications" class="card">
       <h2>Certifications</h2>
       <ul>
         <li>AWS Certified Solutions Architect – Associate</li>
@@ -78,7 +99,7 @@
       </ul>
     </section>
 
-    <section id="education">
+    <section id="education" class="card">
       <h2>Education</h2>
       <ul>
         <li>M.Sc. Mathematics & Computer Science, ULBS Sibiu (2013-2019)</li>

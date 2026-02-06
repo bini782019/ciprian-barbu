@@ -1,10 +1,12 @@
 :root {
-  --primary: #0052cc;
-  --text: #222;
-  --bg: #f7f9fc;
+  --primary: #1d4ed8;
+  --primary-soft: #dbeafe;
+  --text: #0f172a;
+  --muted: #475569;
+  --bg: #f1f5f9;
   --card: #ffffff;
-  --radius: 8px;
-  --max-width: 900px;
+  --radius: 14px;
+  --max-width: 1020px;
 }
 
 * {
@@ -14,76 +16,159 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.15), transparent 35%),
+    radial-gradient(circle at 100% 20%, rgba(29, 78, 216, 0.1), transparent 28%),
+    var(--bg);
   line-height: 1.6;
 }
 
 .container {
   max-width: var(--max-width);
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 1.2rem;
 }
 
-header {
-  background: var(--primary);
+.hero {
+  padding: 3.5rem 0 2.2rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  background: linear-gradient(130deg, #0f172a, #1e3a8a);
   color: #fff;
-  padding: 2.5rem 0;
-  text-align: center;
+  padding: 1.7rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.24);
 }
 
-header .photo {
-  width: 120px;
-  height: 120px;
+.photo {
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #fff;
-  margin-bottom: 1rem;
+  border: 4px solid rgba(255, 255, 255, 0.9);
 }
 
-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.25rem;
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  opacity: 0.8;
+  margin-bottom: 0.35rem;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+  line-height: 1.2;
 }
 
 .tagline {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  opacity: 0.9;
+  margin: 0.65rem 0 1rem;
+  color: rgba(248, 250, 252, 0.92);
+  max-width: 60ch;
 }
 
-.contact a, .contact span {
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.contact a,
+.contact span {
   color: #fff;
-  margin: 0 0.5rem;
   text-decoration: none;
-  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .contact a:hover {
-  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-section {
+.main-grid {
+  display: grid;
+  gap: 1.1rem;
+  padding-bottom: 2.2rem;
+}
+
+.card {
   background: var(--card);
-  margin: 1.5rem 0;
-  padding: 1.5rem;
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+  padding: 1.3rem;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+}
+
+.featured-card {
+  border: 1px solid #cbd5e1;
 }
 
 h2 {
-  margin-bottom: 1rem;
   color: var(--primary);
+  margin-bottom: 0.85rem;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.05rem;
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+.impact-grid {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.impact-grid article {
+  background: var(--primary-soft);
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+
+.impact-grid h3 {
+  color: var(--primary);
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.timeline article {
+  border-left: 3px solid #bfdbfe;
+  padding-left: 0.85rem;
+}
+
+.role {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-bottom: 0.3rem;
 }
 
 ul {
   list-style: none;
-  padding-left: 0;
-}
-
-li {
-  margin-bottom: 1rem;
+  display: grid;
+  gap: 0.65rem;
 }
 
 .skills-grid {
@@ -93,26 +178,38 @@ li {
 }
 
 .skills-grid span {
-  background: #e0ebff;
+  background: var(--primary-soft);
   color: var(--primary);
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  padding: 0.42rem 0.82rem;
+  border-radius: 999px;
+  font-size: 0.89rem;
+  font-weight: 600;
 }
 
 footer {
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0 1.6rem;
+  color: #64748b;
   font-size: 0.9rem;
-  color: #666;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.8rem;
+@media (max-width: 760px) {
+  .hero {
+    padding-top: 1.4rem;
   }
-  .contact a, .contact span {
-    display: block;
-    margin: 0.25rem 0;
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    gap: 1rem;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+
+  .impact-grid {
+    grid-template-columns: 1fr;
   }
 }
